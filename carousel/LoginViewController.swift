@@ -33,6 +33,11 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var signInActivityIndicator: UIActivityIndicatorView!
     
+    @IBAction func didPressSignIn(sender: AnyObject) {
+        signInActivityIndicator.startAnimating()
+        signInButton.selected = true
+        print("it worked")
+    }
 
     // keyboard show/hide functions
     func keyboardWillShow(notification: NSNotification!) {
