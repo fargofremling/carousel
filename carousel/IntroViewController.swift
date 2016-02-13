@@ -10,9 +10,14 @@ import UIKit
 
 class IntroViewController: UIViewController {
 
+    @IBOutlet weak var introScrollView: UIScrollView!
+    
+    @IBOutlet weak var introImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationController?.navigationBarHidden = true
+        self.introScrollView.contentSize = CGSize (width: 320, height: 1136)
+        
         // Do any additional setup after loading the view.
     }
 
