@@ -8,12 +8,21 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+class WelcomeViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var welcomeScrollView: UIScrollView!
+    
+    @IBOutlet weak var welcomePageControl: UIPageControl!
+    func scrollViewDidEndDecelerating(welcomeScrollView: UIScrollView){ let page : Int = Int(round(welcomeScrollView.contentOffset.x / 320))
+        
+        // Set the current page, so the dots will update
+        welcomePageControl.currentPage = page
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.welcomeScrollView.contentSize = CGSize (width: 1280, height: 568)
+        welcomeScrollView.delegate = self
+        
+        welcomeScrollView.contentSize = CGSize (width: 1280, height: 568)
         // Do any additional setup after loading the view.
     }
 

@@ -33,26 +33,27 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var signInActivityIndicator: UIActivityIndicatorView!
     
+    // button action
     @IBAction func didPressSignIn(sender: AnyObject) {
         signInActivityIndicator.startAnimating()
         signInButton.selected = true
-        print("it worked")
     }
 
-    // keyboard show/hide functions
+    // keyboard show functions
     func keyboardWillShow(notification: NSNotification!) {
         fieldParentView.frame.origin.y = fieldParentInitialY + fieldParentOffset
             
         buttonParentView.frame.origin.y = buttonParentInitialY + buttonParentOffset
     }
-    
+
+    // keyboard hide functions
     func keyboardWillHide(notiification: NSNotification!) {
         fieldParentView.frame.origin.y = fieldParentInitialY
         buttonParentView.frame.origin.y = buttonParentInitialY
     }
     
+    // scroll down to dismss keyboard
     func scrollViewDidScroll(loginScrollView: UIScrollView){
-        print("it worked")
         if loginScrollView.contentOffset.y <= -50 {
             // Hide the keyboard
             view.endEditing(true)
