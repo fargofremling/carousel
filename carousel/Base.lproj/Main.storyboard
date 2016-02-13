@@ -97,7 +97,7 @@
                                                 <rect key="frame" x="21" y="35" width="278" height="54"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </button>
-                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="2pz-kL-I8b">
+                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" id="2pz-kL-I8b">
                                                 <rect key="frame" x="228" y="52" width="20" height="20"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </activityIndicatorView>
@@ -124,6 +124,7 @@
                         <outlet property="buttonParentView" destination="2ZP-mS-fvU" id="g31-xm-hIq"/>
                         <outlet property="emailTextField" destination="hu4-h4-uas" id="3TQ-4R-Pnl"/>
                         <outlet property="fieldParentView" destination="D5e-wC-ugq" id="cKO-2J-2Em"/>
+                        <outlet property="loginNavBar" destination="jnb-cu-4x6" id="S6M-KB-Xel"/>
                         <outlet property="loginScrollView" destination="KKM-uA-3CZ" id="msX-OM-SsG"/>
                         <outlet property="passwordTextField" destination="Kil-5Q-wJ5" id="BCe-42-lok"/>
                         <outlet property="signInActivityIndicator" destination="2pz-kL-I8b" id="x4a-fa-VQV"/>

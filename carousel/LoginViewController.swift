@@ -8,7 +8,10 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UIScrollViewDelegate {
+    
+    // outlet for nav bar
+    @IBOutlet weak var loginNavBar: UIImageView!
     
     // outlet for scrollview
     @IBOutlet weak var loginScrollView: UIScrollView!
@@ -41,12 +44,25 @@ class LoginViewController: UIViewController {
         fieldParentView.frame.origin.y = fieldParentInitialY
         buttonParentView.frame.origin.y = buttonParentInitialY
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        loginScrollView.delegate = self
+        
         // scroll view size
-        self.loginScrollView.contentSize = loginScrollView.frame.size
-        self.loginScrollView.contentInset.bottom = 100
+        loginScrollView.contentSize = loginScrollView.frame.size
+        loginScrollView.contentInset.bottom = 100
+        
+        func loginScrollViewDidScroll(loginScrollView: UIScrollView){
+            print("it worked")
+            if loginScrollView.contentOffset.y <= -20 {
+                // Hide the keyboard
+                view.endEditing(true)
+                
+            }
+        }
+        
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
         
@@ -61,8 +77,32 @@ class LoginViewController: UIViewController {
         buttonParentInitialY = buttonParentView.frame.origin.y
         buttonParentOffset = -250
         
-    }
 
+    }
+    // the vidw is about to appear
+    override func viewWillAppear(animated: Bool) {
+        // Set initial transform values 20% of original size
+        let transform = CGAffineTransformMakeScale(0.2, 0.2)
+        // Apply the transform properties of the views
+        loginNavBar.transform = transform
+        fieldParentView.transform = transform
+        // Set the alpha properties of the views to transparent
+        loginNavBar.alpha = 0
+        fieldParentView.alpha = 0
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        //Animate the code within over 0.3 seconds...
+        UIView.animateWithDuration(0.3) { () -> Void in
+            // Return the views transform properties to their default states.
+            self.fieldParentView.transform = CGAffineTransformIdentity
+            self.loginNavBar.transform = CGAffineTransformIdentity
+            // Set the alpha properties of the views to fully opaque
+            self.fieldParentView.alpha = 1
+            self.loginNavBar.alpha = 1
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
