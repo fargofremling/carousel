@@ -34,9 +34,30 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var signInActivityIndicator: UIActivityIndicatorView!
     
     // button action
-    @IBAction func didPressSignIn(sender: AnyObject) {
-        signInActivityIndicator.startAnimating()
-        signInButton.selected = true
+    @IBAction func didPresSignInButton(sender: AnyObject) {
+        
+        func showAlertWithTitle(title: String, andMessage message: String){
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+            let cancelAction = UIAlertAction(title: "OK", style: .Cancel){ (action) in }
+            alert.addAction(cancelAction)
+            presentViewController(alert, animated: true){}
+        }
+        
+        if emailTextField.text!.isEmpty || passwordTextField.text!.isEmpty {
+            showAlertWithTitle("Email & Password Required", andMessage: "Please enter an email address and password.")
+        } else {
+            signInActivityIndicator.startAnimating()
+            delay(2) {
+                if self.emailTextField.text == "test" && self.passwordTextField.text == "ok" {
+                    self.signInActivityIndicator.stopAnimating()
+                    self.performSegueWithIdentifier("signInButtonSegue", sender: self)
+                } else {
+                    self.signInActivityIndicator.stopAnimating()
+                    showAlertWithTitle("Invalid Email or Password", andMessage: "Please check the email and password combination.")
+                }
+            }
+        }
+    
     }
 
     // keyboard show functions
@@ -59,6 +80,15 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
             view.endEditing(true)
             
         }
+    }
+    
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
