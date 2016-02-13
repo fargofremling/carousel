@@ -33,6 +33,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var signInActivityIndicator: UIActivityIndicatorView!
     
+
     // keyboard show/hide functions
     func keyboardWillShow(notification: NSNotification!) {
         fieldParentView.frame.origin.y = fieldParentInitialY + fieldParentOffset
@@ -45,6 +46,14 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
         buttonParentView.frame.origin.y = buttonParentInitialY
     }
     
+    func scrollViewDidScroll(loginScrollView: UIScrollView){
+        print("it worked")
+        if loginScrollView.contentOffset.y <= -50 {
+            // Hide the keyboard
+            view.endEditing(true)
+            
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,15 +62,6 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
         // scroll view size
         loginScrollView.contentSize = loginScrollView.frame.size
         loginScrollView.contentInset.bottom = 100
-        
-        func loginScrollViewDidScroll(loginScrollView: UIScrollView){
-            print("it worked")
-            if loginScrollView.contentOffset.y <= -20 {
-                // Hide the keyboard
-                view.endEditing(true)
-                
-            }
-        }
         
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)

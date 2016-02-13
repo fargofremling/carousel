@@ -114,6 +114,7 @@
                                 <rect key="frame" x="8" y="25" width="38" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
+                                    <action selector="didPressSignIn:" destination="Zkd-ax-usa" eventType="touchUpInside" id="pIA-W3-RUR"/>
                                     <segue destination="BYZ-38-t0r" kind="modal" id="ZEy-vc-jUZ"/>
                                 </connections>
                             </button>
