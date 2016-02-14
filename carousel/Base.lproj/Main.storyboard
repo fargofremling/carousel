@@ -25,7 +25,7 @@
                                         <rect key="frame" x="19" y="1060" width="281" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
-                                            <segue destination="Zkd-ax-usa" kind="modal" identifier="signInDropBoxSegue" id="Rcd-KP-bFY"/>
+                                            <segue destination="Zkd-ax-usa" kind="push" identifier="signInDropBoxSegue" id="Rcd-KP-bFY"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -46,12 +46,12 @@
             </objects>
             <point key="canvasLocation" x="105" y="397"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Sign In to Dropbox-->
         <scene sceneID="UiR-bU-jAJ">
             <objects>
                 <viewController id="Zkd-ax-usa" customClass="LoginViewController" customModule="carousel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D5F-Pp-af1">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1136"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="KKM-uA-3CZ">
@@ -59,7 +59,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" id="D5e-wC-ugq">
-                                        <rect key="frame" x="0.0" y="80" width="320" height="200"/>
+                                        <rect key="frame" x="0.0" y="62" width="320" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="create_form" id="aWp-VO-KuZ">
@@ -86,7 +86,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" id="2ZP-mS-fvU">
-                                        <rect key="frame" x="0.0" y="440" width="320" height="128"/>
+                                        <rect key="frame" x="0.0" y="415" width="320" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="sign_in_buttons" id="KGX-Ym-ayX">
@@ -117,14 +117,15 @@
                                 <rect key="frame" x="8" y="25" width="38" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="didPressSignIn:" destination="Zkd-ax-usa" eventType="touchUpInside" id="Y3M-T2-xCU"/>
-                                    <segue destination="qLY-Jr-qZt" kind="modal" identifier="signInButtonSegue" id="Lda-Fs-S8V"/>
+                                    <action selector="backButtonAction:" destination="Zkd-ax-usa" eventType="touchUpInside" id="Fte-8c-VGM"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Sign In to Dropbox" id="Qwn-qm-U8d"/>
                     <connections>
+                        <outlet property="backButton" destination="Dri-q1-TiB" id="hSp-TX-fLT"/>
                         <outlet property="buttonParentView" destination="2ZP-mS-fvU" id="g31-xm-hIq"/>
                         <outlet property="emailTextField" destination="hu4-h4-uas" id="3TQ-4R-Pnl"/>
                         <outlet property="fieldParentView" destination="D5e-wC-ugq" id="cKO-2J-2Em"/>

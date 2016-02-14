@@ -12,6 +12,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     
     // outlet for nav bar
     @IBOutlet weak var loginNavBar: UIImageView!
+    @IBOutlet weak var backButton: UIButton!
     
     // outlet for scrollview
     @IBOutlet weak var loginScrollView: UIScrollView!
@@ -33,7 +34,12 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var signInActivityIndicator: UIActivityIndicatorView!
     
-    // button action
+    // back button action
+    @IBAction func backButtonAction(sender: AnyObject) {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    
+    // sign in button action
     @IBAction func didPresSignInButton(sender: AnyObject) {
         
         func showAlertWithTitle(title: String, andMessage message: String){
@@ -78,7 +84,6 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
         if loginScrollView.contentOffset.y <= -50 {
             // Hide the keyboard
             view.endEditing(true)
-            
         }
     }
     
