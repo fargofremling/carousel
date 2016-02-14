@@ -54,7 +54,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
         } else {
             signInActivityIndicator.startAnimating()
             delay(2) {
-                if self.emailTextField.text == "test" && self.passwordTextField.text == "ok" {
+                if self.emailTextField.text == "te" && self.passwordTextField.text == "ok" {
                     self.signInActivityIndicator.stopAnimating()
                     self.performSegueWithIdentifier("signInButtonSegue", sender: self)
                 } else {

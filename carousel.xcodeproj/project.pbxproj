@@ -17,6 +17,7 @@
 		3A84F0861C6C5850002A7D8E /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A84F0851C6C5850002A7D8E /* IntroViewController.swift */; };
 		3A84F0881C6C59E7002A7D8E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A84F0871C6C59E7002A7D8E /* LoginViewController.swift */; };
 		3AB019F01C6F3E9800F6B1C6 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB019EF1C6F3E9800F6B1C6 /* WelcomeViewController.swift */; };
+		3AB019F21C70E7E400F6B1C6 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB019F11C70E7E400F6B1C6 /* TimeLineViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		3A84F0851C6C5850002A7D8E /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntroViewController.swift; path = carousel/IntroViewController.swift; sourceTree = "<group>"; };
 		3A84F0871C6C59E7002A7D8E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = carousel/LoginViewController.swift; sourceTree = "<group>"; };
 		3AB019EF1C6F3E9800F6B1C6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = carousel/WelcomeViewController.swift; sourceTree = "<group>"; };
+		3AB019F11C70E7E400F6B1C6 /* TimeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimeLineViewController.swift; path = carousel/TimeLineViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				3A84F0851C6C5850002A7D8E /* IntroViewController.swift */,
 				3A84F0871C6C59E7002A7D8E /* LoginViewController.swift */,
 				3AB019EF1C6F3E9800F6B1C6 /* WelcomeViewController.swift */,
+				3AB019F11C70E7E400F6B1C6 /* TimeLineViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				3A84F0861C6C5850002A7D8E /* IntroViewController.swift in Sources */,
 				3A84F05A1C6C55E5002A7D8E /* ViewController.swift in Sources */,
 				3A84F0581C6C55E5002A7D8E /* AppDelegate.swift in Sources */,
+				3AB019F21C70E7E400F6B1C6 /* TimeLineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
