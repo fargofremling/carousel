@@ -63,17 +63,16 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
                 }
             }
         }
-    
     }
 
-    // keyboard show functions
+    // keyboard show function
     func keyboardWillShow(notification: NSNotification!) {
         fieldParentView.frame.origin.y = fieldParentInitialY + fieldParentOffset
             
         buttonParentView.frame.origin.y = buttonParentInitialY + buttonParentOffset
     }
 
-    // keyboard hide functions
+    // keyboard hide function
     func keyboardWillHide(notiification: NSNotification!) {
         fieldParentView.frame.origin.y = fieldParentInitialY
         buttonParentView.frame.origin.y = buttonParentInitialY
@@ -87,6 +86,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
+    // delay function
     func delay(delay:Double, closure:()->()) {
         dispatch_after(
             dispatch_time(
@@ -95,6 +95,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
             ),
             dispatch_get_main_queue(), closure)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -117,10 +118,9 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
         // sets button parent view offset
         buttonParentInitialY = buttonParentView.frame.origin.y
         buttonParentOffset = -250
-        
-
     }
-    // the vidw is about to appear
+    
+    // the view is about to appear
     override func viewWillAppear(animated: Bool) {
         // Set initial transform values 20% of original size
         let transform = CGAffineTransformMakeScale(0.2, 0.2)
@@ -148,7 +148,6 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation

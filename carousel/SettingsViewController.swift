@@ -1,5 +1,5 @@
 //
-//  TimeLineViewController.swift
+//  SettingsViewController.swift
 //  carousel
 //
 //  Created by Fremling, Alicia (Contractor) on 2/14/16.
@@ -8,17 +8,17 @@
 
 import UIKit
 
-class TimeLineViewController: UIViewController {
+class SettingsViewController: UIViewController {
 
-    @IBOutlet weak var feedScrollView: UIScrollView!
+    @IBOutlet weak var settingsScrollView: UIScrollView!
     
-    @IBOutlet weak var feedView: UIImageView!
     
+    @IBOutlet weak var settingsView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.feedScrollView.contentSize = feedView.image!.size
-       
+        settingsScrollView.contentSize = settingsView.image!.size
+        
         // Do any additional setup after loading the view.
     }
 

@@ -1,5 +1,5 @@
 //
-//  TimeLineViewController.swift
+//  ConversationsViewController.swift
 //  carousel
 //
 //  Created by Fremling, Alicia (Contractor) on 2/14/16.
@@ -8,17 +8,18 @@
 
 import UIKit
 
-class TimeLineViewController: UIViewController {
+class ConversationsViewController: UIViewController {
 
-    @IBOutlet weak var feedScrollView: UIScrollView!
+    @IBOutlet weak var backButton: UIButton!
     
-    @IBOutlet weak var feedView: UIImageView!
+    
+    @IBAction func backButtonAction(sender: AnyObject) {
+        navigationController?.popToRootViewControllerAnimated(true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.feedScrollView.contentSize = feedView.image!.size
-       
+
         // Do any additional setup after loading the view.
     }
 
@@ -27,7 +28,6 @@ class TimeLineViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
