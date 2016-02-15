@@ -3,7 +3,7 @@ Week 2 CodePath Assignment
 
 The purpose of this project is to leverage views, view properties and events to create a high fidelity prototype that is difficult to distinguish from a production app.
 
-Time spent: #16 hours
+Time spent: #12 hours
 
 #Project Requirements
 
