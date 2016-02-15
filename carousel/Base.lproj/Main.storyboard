@@ -201,7 +201,7 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cMc-Eb-7Ef">
-                                        <rect key="frame" x="11" y="32" width="298" height="56"/>
+                                        <rect key="frame" x="11" y="52" width="298" height="56"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
                                             <segue destination="Hf4-Oo-JyU" kind="modal" id="fUQ-in-M3g"/>
