@@ -38,7 +38,7 @@ class WelcomeViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         welcomeScrollView.delegate = self
         
-        welcomeScrollView.contentSize = CGSize (width: 1280, height: 568)
+        welcomeScrollView.contentSize = CGSize (width: 1280, height: 528)
         
         backupParentView.alpha = 0
         
