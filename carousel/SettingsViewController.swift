@@ -12,13 +12,17 @@ class SettingsViewController: UIViewController {
 
     @IBOutlet weak var settingsScrollView: UIScrollView!
     
+    @IBOutlet weak var exitSettingsButton: UIButton!
+    
+    @IBAction func exitSettingsAction(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     
     @IBOutlet weak var settingsView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        settingsScrollView.contentSize = settingsView.image!.size
-        
+        settingsScrollView.contentSize = CGSize (width: 320, height: 759)
         // Do any additional setup after loading the view.
     }
 
