@@ -25,7 +25,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     // outlets for textfields
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-
+    
     // outlet for button parent view
     @IBOutlet weak var buttonParentView: UIView!
     var buttonParentInitialY: CGFloat!
@@ -64,14 +64,14 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
             }
         }
     }
-
+    
     // keyboard show function
     func keyboardWillShow(notification: NSNotification!) {
         fieldParentView.frame.origin.y = fieldParentInitialY + fieldParentOffset
-            
+        
         buttonParentView.frame.origin.y = buttonParentInitialY + buttonParentOffset
     }
-
+    
     // keyboard hide function
     func keyboardWillHide(notiification: NSNotification!) {
         fieldParentView.frame.origin.y = fieldParentInitialY
@@ -105,7 +105,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
         loginScrollView.contentSize = loginScrollView.frame.size
         loginScrollView.contentInset.bottom = 100
         
-
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
         
         
@@ -148,15 +148,15 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
