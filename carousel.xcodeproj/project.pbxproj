@@ -20,6 +20,7 @@
 		3AB019F21C70E7E400F6B1C6 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB019F11C70E7E400F6B1C6 /* TimeLineViewController.swift */; };
 		3AB019F41C714DA600F6B1C6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB019F31C714DA600F6B1C6 /* SettingsViewController.swift */; };
 		3AB019F61C714DDC00F6B1C6 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB019F51C714DDC00F6B1C6 /* ConversationsViewController.swift */; };
+		3AEAAC4E1C72CCE800753804 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEAAC4D1C72CCE800753804 /* Common.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		3AB019F11C70E7E400F6B1C6 /* TimeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimeLineViewController.swift; path = carousel/TimeLineViewController.swift; sourceTree = "<group>"; };
 		3AB019F31C714DA600F6B1C6 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = carousel/SettingsViewController.swift; sourceTree = "<group>"; };
 		3AB019F51C714DDC00F6B1C6 /* ConversationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConversationsViewController.swift; path = carousel/ConversationsViewController.swift; sourceTree = "<group>"; };
+		3AEAAC4D1C72CCE800753804 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			children = (
 				3A84F0571C6C55E5002A7D8E /* AppDelegate.swift */,
 				3A84F0591C6C55E5002A7D8E /* ViewController.swift */,
+				3AEAAC4D1C72CCE800753804 /* Common.swift */,
 				3A84F05B1C6C55E5002A7D8E /* Main.storyboard */,
 				3A84F05E1C6C55E5002A7D8E /* Assets.xcassets */,
 				3A84F0601C6C55E5002A7D8E /* LaunchScreen.storyboard */,
@@ -289,6 +292,7 @@
 				3AB019F01C6F3E9800F6B1C6 /* WelcomeViewController.swift in Sources */,
 				3AB019F41C714DA600F6B1C6 /* SettingsViewController.swift in Sources */,
 				3AB019F61C714DDC00F6B1C6 /* ConversationsViewController.swift in Sources */,
+				3AEAAC4E1C72CCE800753804 /* Common.swift in Sources */,
 				3A84F0861C6C5850002A7D8E /* IntroViewController.swift in Sources */,
 				3A84F05A1C6C55E5002A7D8E /* ViewController.swift in Sources */,
 				3A84F0581C6C55E5002A7D8E /* AppDelegate.swift in Sources */,
